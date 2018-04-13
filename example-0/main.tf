@@ -28,8 +28,8 @@ resource "digitalocean_droplet" "dev-box" {
   name  = "${element(data.github_team.devopsdsm.members, count.index)}"
 
   image  = "ubuntu-16-04-x64"
-  region = "nyc2"
-  size   = "4096mb"
+  region = "nyc1"
+  size   = "512mb"
 }
 
 output "members" {
